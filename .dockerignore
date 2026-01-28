@@ -1,0 +1,13 @@
+.git
+.gitignore
+__pycache__
+venv
+.streamlit
+.idea
+*.pyc
+*.pyo
+*.pyd
+.Python
+.DS_Store
+.vscode
+.env
