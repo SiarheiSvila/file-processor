@@ -1,6 +1,8 @@
+version: '3.7'
+
 services:
-  streamlit:
-    container_name: "The name you want your container to have"
+  app:
+    container_name: streamlit-app
     build:
       dockerfile: ./Dockerfile
       context: ./

@@ -2,12 +2,17 @@ import boto3
 import json
 import os
 import base64
+from dotenv import load_dotenv
 from const import PROMPT
+
+load_dotenv()
 
 class BedrockClient:
     def __init__(self, model: str = 'us.anthropic.claude-sonnet-4-20250514-v1:0'):
         self.model_id = model
         self.client = boto3.client(
+            aws_access_key_id=os.environ.get("ACCESS_KEY"),
+            aws_secret_access_key=os.environ.get("SECRET_ACCESS_KEY"),
             service_name='bedrock-runtime',
             region_name=os.environ.get("AWS_REGION", "us-east-1")
         )

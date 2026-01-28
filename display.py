@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from const import SOURCE_DATAFRAME
+import json
 
 def display(attributes: json):
     # Extract the data from json object to streamlit table.
