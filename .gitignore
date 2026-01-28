@@ -1,0 +1,43 @@
+## Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+## Virtual environments
+venv/
+.venv/
+ENV/
+env/
+
+## Packaging / build
+build/
+dist/
+*.egg-info/
+.eggs/
+
+## Testing / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+## Jupyter / notebooks
+.ipynb_checkpoints/
+
+## Streamlit
+.streamlit/secrets.toml
+
+## Environment / secrets
+.env
+.env.*
+*.pem
+*.key
+
+## OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+## Logs
+*.log
