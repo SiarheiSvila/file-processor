@@ -44,220 +44,221 @@ This section pertains to the medical benefits of the plan. It covers aspects lik
 - and emergency services.
 
 Plan: 
-- 1630: Variable Coinsurance Applies,
-- 1631: Coinsurance,
-- 1633: Coinsurance.
+1630: Variable Coinsurance Applies (INN-OON)
+1631: Coinsurance (INN)
+1633: Coinsurance (OON)
+1635: Combined Medical/RX Deductible/OOP (INN-OON)
 
 Plan Deductible: 
-- 1638: Plan Deductible - Order of Applicability,
-- 2689: Collective Deductible,
-- 1639: Individual Plan - Indiv Ded Max Amount,
-- 1641: Individual Plan - Indiv Ded Max Amount,
-- 2848: Family Plan - Indiv Ded Max Amount,
-- 2849: Family Plan - Indiv Ded Max Amount,
-- 1642: Family Plan - Family Ded Max Amount,
-- 1644: Family Plan - Family Ded Max Amount,
-- 3609: Individual Plan - Indiv Ded Max Amount (Tier 1),
-- 3610: Family Plan - Indiv Ded Max Amount (Tier 1),
-- 3611: Family Plan - Family Ded Max Amount (Tier 1),
-- 1645: Pharmacy Individual Deductible Cap Amount,
-- 1646: Pharmacy Individual Deductible Cap Amount,
-- 1647: Pharmacy Family Deductible Cap Amount,
-- 1648: Pharmacy Family Deductible Cap Amount,
-- 1649: 3 Month Carryover,
-- 2708: Up Front Individual - Max Amount,
-- 2709: Up Front Individual - Max Amount,
-- 2710: Up Front Family - Max Amount,
-- 2711: Up Front Family - Max Amount.
+1638: Plan Deductible - Order of Applicability (INN-OON)
+2689: Collective Deductible (INN-OON)
+1639: Individual Plan - Indiv Ded Max Amount (INN)
+1641: Individual Plan - Indiv Ded Max Amount (OON)
+2848: Family Plan - Indiv Ded Max Amount (INN)
+2849: Family Plan - Indiv Ded Max Amount (OON)
+1642: Family Plan - Family Ded Max Amount (INN)
+1644: Family Plan - Family Ded Max Amount (OON)
+3609: Individual Plan - Indiv Ded Max Amount (Tier 1) (INN)
+3610: Family Plan - Indiv Ded Max Amount (Tier 1) (INN)
+3611: Family Plan - Family Ded Max Amount (Tier 1) (INN)
+1645: Pharmacy Individual Deductible Cap Amount (INN)
+1646: Pharmacy Individual Deductible Cap Amount (OON)
+1647: Pharmacy Family Deductible Cap Amount (INN)
+1648: Pharmacy Family Dedu ctible Cap Amount (OON)
+1649: 3 Month Carryover (INN-OON)
+2708: Up Front Individual - Max Amount (IN1)
+2709: Up Front Individual - Max Amount (OON)
+2710: Up Front Family - Max Amount (IN1)
+2711: Up Front Family - Max Amount (OON)
 
 Plan Out of Pocket: 
-- 2690: Collective OOP,
-- 2694: Individual Plan - Indiv OOP Max Amount,
-- 2696: Individual Plan - Indiv OOP Max Amount,
-- 2691: Family Plan - Indiv OOP Max Amount,
-- 2692: Family Plan - Indiv OOP Max Amount,
-- 2697: Family Plan - Family OOP Max Amount,
-- 2699: Family Plan - Family OOP Max Amount,
-- 3612: Individual Plan - Indiv OOP Max Amount (Tier 1),
-- 3613: Family Plan - Indiv OOP Max Amount (Tier 1),
-- 3614: Family Plan - Family OOP Max Amount (Tier 1),
-- 2244: OOP Max Copays Accumulation,
-- 2246: OOP Max Copays Accumulation,
-- 2247: OOP Max Plan Deductible Accumulation,
-- 2249: OOP Max Plan Deductible Accumulation.
+2690: Collective OOP (INN-OON)
+2694: Individual Plan - Indiv OOP Max Amount (INN)
+2696: Individual Plan - Indiv OOP Max Amount (OON)
+2691: Family Plan - Indiv OOP Max Amount (INN)
+2692: Family Plan - Indiv OOP Max Amount (OON)
+2697: Family Plan - Family OOP Max Amount (INN)
+2699: Family Plan - Family OOP Max Amount (OON)
+3612: Individual Plan - Indiv OOP Max Amount (Tier 1) (INN)
+3613: Family Plan - Indiv OOP Max Amount (Tier 1) (INN)
+3614: Family Plan - Family OOP Max Amount (Tier 1) (INN)
+2244: OOP Max Copays Accumulation (INN)
+2246: OOP Max Copays Accumulation (OON)
+2247: OOP Max Plan Deductible Accumulation (INN)
+2249: OOP Max Plan Deductible Accumulation (OON)
 
 Physician Services - Office Visit:
-- 2432: Tiered Services Include,
-- 2688: Cost Share Option,
-- 2427: Non-Reviewed Specialist,
-- 2428: Tier 1 Coinsurance,
-- 2430: Non-Tier 1 Coinsurance,
-- 1657: Combined PCP and Specialist,
-- 1659: Combined PCP and Specialist,
-- 2433: Primary Care Physician Service Tier 1 Copay,
-- 2434: Primary Care Physician Service Tier 1 Coinsurance,
-- 2436: Plan Deductible Applies to Primary Care Physician Service Tier 1,
-- 1673: Primary Care Physician Service Copay,
-- 1675: Primary Care Physician Service Coinsurance,
-- 1677: Primary Care Physician Service Coinsurance,
-- 1678: Plan Deductible Applies to Primary Care Physician,
-- 1680: Plan Deductible Applies to Primary Care Physician,
-- 2438: Specialty Care Service Tier 1 Copay,
-- 2439: Specialty Care Service Tier 1 Coinsurance,
-- 2441: Plan Deductible Applies to Specialty Care Service Tier 1,
-- 1700: Specialty Care Service Copay,
-- 1702: Specialty Care Service Coinsurance,
-- 1704: Specialty Care Service Coinsurance,
-- 1705: Plan Deductible Applies to Specialty Care,
-- 1707: Plan Deductible Applies to Specialty Care,
-- 1720: Office Surgery Cost Share Option,
-- 1722: Office Surgery Cost Share Option,
-- 1723: Plan Deductible Applies to Office Surgery,
-- 2679: Plan Deductible Applies to Office Surgery,
-- 3634: Office Surgery PCP Copay Tier 1,
-- 3635: Office Surgery PCP Coinsurance Tier 1,
-- 3636: Office Surgery Plan Ded Applies to PCP Tier 1,
-- 3624: Office Surgery PCP Copay,
-- 3625: Office Surgery PCP Coinsurance,
-- 3626: Office Surgery PCP Coinsurance,
-- 3627: Office Surgery Plan Ded Applies to PCP,
-- 3628: Office Surgery Plan Ded Applies to PCP,
-- 3637: Office Surgery SPC Copay Tier 1,
-- 3638: Office Surgery SPC Coinsurance Tier 1,
-- 3639: Office Surgery Plan Ded Applies to SPC Tier 1,
-- 3629: Office Surgery SPC Copay,
-- 3630: Office Surgery SPC Coinsurance,
-- 3631: Office Surgery SPC Coinsurance,
-- 3632: Office Surgery Plan Ded Applies to SPC,
-- 3633: Office Surgery Plan Ded Applies to SPC,
-- 2673: Alternative Care Annual Maximum (OR/WA Situs States Only) Cost Share Options.
+2432: Tiered Services Include (INN)
+2688: Cost Share Option (INN)
+2427: Non-Reviewed Specialist (INN)
+2428: Tier 1 Coinsurance (INN)
+2430: Non-Tier 1 Coinsurance (INN)
+1657: Combined PCP and Specialist (INN)
+1659: Combined PCP and Specialist (OON)
+2433: Primary Care Physician Service Tier 1 Copay (INN)
+2434: Primary Care Physician Service Tier 1 Coinsurance (INN)
+2436: Plan Deductible Applies to Primary Care Physician Service Tier 1 (INN)
+1673: Primary Care Physician Service Copay (INN)
+1675: Primary Care Physician Service Coinsurance (INN)
+1677: Primary Care Physician Service Coinsurance (OON)
+1678: Plan Deductible Applies to Primary Care Physician (INN)
+1680: Plan Deductible Applies to Primary Care Physician (OON)
+2438: Specialty Care Service Tier 1 Copay (INN)
+2439: Specialty Care Service Tier 1 Coinsurance (INN)
+2441: Plan Deductible Applies to Specialty Care Service Tier 1 (INN)
+1700: Specialty Care Service Copay (INN)
+1702: Specialty Care Service Coinsurance (INN)
+1704: Specialty Care Service Coinsurance (OON)
+1705: Plan Deductible Applies to Specialty Care (INN)
+1707: Plan Deductible Applies to Specialty Care (OON)
+1720: Office Surgery Cost Share Option (INN)
+1722: Office Surgery Cost Share Option (OON)
+1723: Plan Deductible Applies to Office Surgery (INN)
+2679: Plan Deductible Applies to Office Surgery (OON)
+3634: Office Surgery PCP Copay Tier 1 (INN)
+3635: Office Surgery PCP Coinsurance Tier 1 (INN)
+3636: Office Surgery Plan Ded Applies to PCP Tier 1 (INN)
+3624: Office Surgery PCP Copay (INN)
+3625: Office Surgery PCP Coinsurance (INN)
+3626: Office Surgery PCP Coinsurance (OON)
+3627: Office Surgery Plan Ded Applies to PCP (INN)
+3628: Office Surgery Plan Ded Applies to PCP (OON)
+3637: Office Surgery SPC Copay Tier 1 (INN)
+3638: Office Surgery SPC Coinsurance Tier 1 (INN)
+3639: Office Surgery Plan Ded Applies to SPC Tier 1 (INN)
+3629: Office Surgery SPC Copay (INN)
+3630: Office Surgery SPC Coinsurance (INN)
+3631: Office Surgery SPC Coinsurance (OON)
+3632: Office Surgery Plan Ded Applies to SPC (INN)
+3633: Office Surgery Plan Ded Applies to SPC (OON)
+2673: Alternative Care Annual Maximum (OR/WA Situs States Only) Cost Share Options (INN-OON)
 
 Physician Services - Virtual Care: 
-- 3422: Benefit Steerage Approved (2021 Filing),
-- 3601: Virtual Primary Care Physician Tier 1 Cost Share Option,
-- 3602: Virtual Primary Care Physician Tier 1 Copay,
-- 3603: Virtual Primary Care Physician Tier 1 Coinsurance,
-- 360 4: Plan Deductible Applies to Virtual Primary Care Physician Tier 1,
-- 3423: Virtual Primary Care Physician Cost Share Option,
-- 3434: Virtual Primary Care Physician Cost Share Option,
-- 3424: Virtual Primary Care Physician Copay,
-- 3425: Virtual Primary Care Physician Coinsurance,
-- 3426: Virtual Primary Care Physician Coinsurance,
-- 3427: Plan Deductible Applies to Virtual Primary Care Physician,
-- 3428: Plan Deductible Applies to Virtual Primary Care Physician,
-- 3605: Virtual Specialty Care Tier 1 Cost Share Option,
-- 3606: Virtual Specialty Care Tier 1 Copay,
-- 3607: Virtual Specialty Care Tier 1 Coinsurance,
-- 3608: Plan Deductible Applies to Virtual Specialty Care Tier 1,
-- 3599: Virtual Specialty Care Cost Share Option,
-- 3600: Virtual Specialty Care Cost Share Option,
-- 3429: Virtual Specialty Care Copay,
-- 3430: Virtual Specialty Care Coinsurance,
-- 3431: Virtual Specialty Care Coinsurance,
-- 3432: Plan Deductible Applies to Virtual Specialty Care,
-- 3433: Plan Deductible Applies to Virtual Specialty Care.
+3422: Benefit Steerage Approved (2021 Filing) (INN)
+3601: Virtual Primary Care Physician Tier 1 Cost Share Option (INN)
+3602: Virtual Primary Care Physician Tier 1 Copay (INN)
+3603: Virtual Primary Care Physician Tier 1 Coinsurance (INN)
+3604: Plan Deductible Applies to Virtual Primary Care Physician Tier 1 (INN)
+3423: Virtual Primary Care Physician Cost Share Option (INN)
+3434: Virtual Primary Care Physician Cost Share Option (OON)
+3424: Virtual Primary Care Physician Copay (INN)
+3425: Virtual Primary Care Physician Coinsurance (INN)
+3426: Virtual Primary Care Physician Coinsurance (OON)
+3427: Plan Deductible Applies to Virtual Primary Care Physician (INN)
+3428: Plan Deductible Applies to Virtual Primary Care Physician (OON)
+3605: Virtual Specialty Care Tier 1 Cost Share Option (INN)
+3606: Virtual Specialty Care Tier 1 Copay (INN)
+3607: Virtual Specialty Care Tier 1 Coinsurance (INN)
+3608: Plan Deductible Applies to Virtual Specialty Care Tier 1 (INN)
+3599: Virtual Specialty Care Cost Share Option (INN)
+3600: Virtual Specialty Care Cost Share Option (OON)
+3429: Virtual Specialty Care Copay (INN)
+3430: Virtual Specialty Care Coinsurance (INN)
+3431: Virtual Specialty Care Coinsurance (OON)
+3432: Plan Deductible Applies to Virtual Specialty Care (INN)
+3433: Plan Deductible Applies to Virtual Specialty Care (OON)
 
 Inpatient Hospital: 
-- 1775: Copay Options,
-- 1778: Copay Options,
-- 1785: Per Admit Copay,
-- 1787: Per Admit Copay,
-- 1788: Per Day Copay,
-- 1790: Per Day Copay,
-- 1791: Annual Day Limit,
-- 1793: Annual Day Limit,
-- 1782: Coinsurance,
-- 1784: Coinsurance,
-- 1779: Plan Deductible Applies,
-- 1781: Plan Deductible Applies.
+1775: Copay Options (INN)
+1778: Copay Options (OON)
+1785: Per Admit Copay (INN)
+1787: Per Admit Copay (OON)
+1788: Per Day Copay (INN)
+1790: Per Day Copay (OON)
+1791: Annual Day Limit (INN)
+1793: Annual Day Limit (OON)
+1782: Coinsurance (INN)
+1784: Coinsurance (OON)
+1779: Plan Deductible Applies (INN)
+1781: Plan Deductible Applies (OON)
 
 Outpatient Facility Services: 
-- 1797: Copay,
-- 1799: Copay,
-- 1794: Coinsurance,
-- 1796: Coinsurance,
-- 1800: Plan Deductible Applies,
-- 1802: Plan Deductible Applies.
+1797: Copay (INN)
+1799: Copay (OON)
+1794: Coinsurance (INN)
+1796: Coinsurance (OON)
+1800: Plan Deductible Applies (INN)
+1802: Plan Deductible Applies (OON)
 
 Emergency Services: 
-- 1837: Emergency Room (ER) Copay,
-- 1838: Emergency Room (ER) Coinsurance,
-- 1847: Plan Deductible Applies (ER),
-- 2685: Urgent Care Cost Share Option,
-- 2686: Urgent Care Cost Share Option,
-- 1848: Urgent Care Facility (UC) Copay,
-- 1850: Urgent Care Facility (UC) Copay,
-- 1851: Urgent Care Facility (UC) Coinsurance,
-- 1853: Urgent Care Facility (UC) Coinsurance,
-- 1854: Plan Deductible Applies (UC),
-- 1856: Plan Deductible Applies (UC),
-- 3381: Ambulance Coinsurance,
-- 3382: Ambulance Coinsurance,
-- 3384: Ambulance Plan Deductible Applies,
-- 3385: Ambulance Plan Deductible Applies,
-- 1858: Ambulance Day Limit Amount,
-- 3650: Ambulance MHSUD Coinsurance,
-- 3651: Ambulance MHSUD Coinsurance,
-- 3652: Ambulance MHSUD Plan Deductible Applies,
-- 3653: Ambulance MHSUD Plan Deductible Applies.
+1837: Emergency Room (ER) Copay (INN-OON)
+1838: Emergency Room (ER) Coinsurance (INN-OON)
+1847: Plan Deductible Applies (ER) (INN-OON)
+2685: Urgent Care Cost Share Option (INN)
+2686: Urgent Care Cost Share Option (OON)
+1848: Urgent Care Facility (UC) Copay (INN)
+1850: Urgent Care Facility (UC) Copay (OON)
+1851: Urgent Care Facility (UC) Coinsurance (INN)
+1853: Urgent Care Facility (UC) Coinsurance (OON)
+1854: Plan Deductible Applies (UC) (INN)
+1856: Plan Deductible Applies (UC) (OON)
+3381: Ambulance Coinsurance (INN)
+3382: Ambulance Coinsurance (OON)
+3384: Ambulance Plan Deductible Applies (INN)
+3385: Ambulance Plan Deductible Applies (OON)
+1858: Ambulance Day Limit Amount (INN-OON)
+3650: Ambulance MHSUD Coinsurance (INN)
+3651: Ambulance MHSUD Coinsurance (OON)
+3652: Ambulance MHSUD Plan Deductible Applies (INN)
+3653: Ambulance MHSUD Plan Deductible Applies (OON)
 
 Laboratory Services: 
-- 1870: Physicians Services - Office Visit,
-- 1872: Physicians Services - Office Visit,
-- 2378: Physicians Services - Office Visit Coinsurance,
-- 2498: Physicians Services - Office Visit Coinsurance,
-- 1873: Plan Deductible Applies at Physicians Services - Office Visit,
-- 2495: Plan Deductible Applies at Physicians Services - Office Visit,
-- 2572: Outpatient Facility Cost Share,
-- 1874: Outpatient Facility Coinsurance,
-- 1876: Outpatient Facility Coinsurance,
-- 1880: Plan Deductible Applies at Outpatient Facility,
-- 1882: Plan Deductible Applies at Outpatient Facility,
-- 1883: Independent Lab Facility Cost Share,
-- 1885: Independent Lab Facility Coinsurance,
-- 1887: Independent Lab Facility Coinsurance,
-- 1891: Plan Deductible Applies at Independent Lab Facility,
-- 1893: Plan Deductible Applies at Independent Lab Facility.
+1870: Physicians Services - Office Visit (INN)
+1872: Physicians Services - Office Visit (OON)
+2378: Physicians Services - Office Visit Coinsurance (INN)
+2498: Physicians Services - Office Visit Coinsurance (OON)
+1873: Plan Deductible Applies at Physicians Services - Office Visit (INN)
+2495: Plan Deductible Applies at Physicians Services - Office Visit (OON)
+2572: Outpatient Facility Cost Share (INN)
+1874: Outpatient Facility Coinsurance (INN)
+1876: Outpatient Facility Coinsurance (OON)
+1880: Plan Deductible Applies at Outpatient Facility (INN)
+1882: Plan Deductible Applies at Outpatient Facility (OON)
+1883: Independent Lab Facility Cost Share (INN)
+1885: Independent Lab Facility Coinsurance (INN)
+1887: Independent Lab Facility Coinsurance (OON)
+1891: Plan Deductible Applies at Independent Lab Facility (INN)
+1893: Plan Deductible Applies at Independent Lab Facility (OON)
 
 Medical Pharmaceuticals: 
-- 2019: Covered at Inpatient Facility,
-- 2021: Covered at Inpatient Facility,
-- 3469: Cigna Pathwell Specialty Network Included,
-- 3470: Cigna Pathwell Specialty Drugs Covered,
-- 3471: Cigna Pathwell Specialty Drugs Covered,
-- 3472: Cigna Pathwell Specialty Drugs Pricing,
-- 3473: Cigna Pathwell Specialty Drugs Preferred Pricing Option,
-- 3474: Cigna Pathwell Specialty Drugs Copay,
-- 3475: Cigna Pathwell Specialty Drugs Coinsurance,
-- 3590: Cigna Pathwell Specialty Drugs Coinsurance,
-- 3476: Plan Deductible Applies to Cigna Pathwell Specialty Drugs,
-- 3591: Plan Deductible Applies to Cigna Pathwell Specialty Drugs,
-- 3477: Other Medical Pharmaceutical Drugs Covered,
-- 3478: Other Medical Pharmaceutical Drugs Covered,
-- 3479: Other Medical Pharmaceutical Drugs Copay,
-- 3480: Other Medical Pharmaceutical Drugs Coinsurance,
-- 3481: Other Medical Pharmaceutical Drug Coinsurance,
-- 3482: Plan Deductible Applies to Other Medical Pharmaceutical Drugs,
-- 3483: Plan Deductible Applies to Other Medical Pharmaceutical Drugs,
-- 2022: Covered at Outpatient Facility,
-- 2024: Covered at Outpatient Facility,
-- 2025: Outpatient Facility Coinsurance,
-- 2027: Outpatient Facility Coinsurance,
-- 2028: Plan Deductible Applies at Outpatient Facility,
-- 2030: Plan Deductible Applies at Outpatient Facility,
-- 2031: Covered at Physician's Office Setting,
-- 2033: Covered at Physician's Office Setting,
-- 2912: Physician Office Cost Share Options,
-- 2034: Physician Office Coinsurance,
-- 2036: Physician Office Coinsurance,
-- 2037: Plan Deductible Applies at Physician's Office,
-- 2039: Plan Deductible Applies at Physician's Office,
-- 2040: Covered at Home Setting,
-- 2042: Covered at Home Setting,
-- 2043: Home Setting Coinsurance,
-- 2045: Home Setting Coinsurance,
-- 2046: Plan Deductible Applies at Home Setting,
-- 2048: Plan Deductible Applies at Home Setting.
+2019: Covered at Inpatient Facility (INN)
+2021: Covered at Inpatient Facility (OON)
+3469: Cigna Pathwell Specialty Network Included (INN)
+3470: Cigna Pathwell Specialty Drugs Covered (INN)
+3471: Cigna Pathwell Specialty Drugs Covered (OON)
+3472: Cigna Pathwell Specialty Drugs Pricing (INN)
+3473: Cigna Pathwell Specialty Drugs Preferred Pricing Option (INN)
+3474: Cigna Pathwell Specialty Drugs Copay (INN)
+3475: Cigna Pathwell Specialty Drugs Coinsurance (INN)
+3590: Cigna Pathwell Specialty Drugs Coinsurance (OON)
+3476: Plan Deductible Applies to Cigna Pathwell Specialty Drugs (INN)
+3591: Plan Deductible Applies to Cigna Pathwell Specialty Drugs (OON)
+3477: Other Medical Pharmaceutical Drugs Covered (INN)
+3478: Other Medical Pharmaceutical Drugs Covered (OON)
+3479: Other Medical Pharmaceutical Drugs Copay (INN)
+3480: Other Medical Pharmaceutical Drugs Coinsurance (INN)
+3481: Other Medical Pharmaceutical Drug Coinsurance (OON)
+3482: Plan Deductible Applies to Other Medical Pharmaceutical Drugs (INN)
+3483: Plan Deductible Applies to Other Medical Pharmaceutical Drugs (OON)
+2022: Covered at Outpatient Facility (INN)
+2024: Covered at Outpatient Facility (OON)
+2025: Outpatient Facility Coinsurance (INN)
+2027: Outpatient Facility Coinsurance (OON)
+2028: Plan Deductible Applies at Outpatient Facility (INN)
+2030: Plan Deductible Applies at Outpatient Facility (OON)
+2031: Covered at Physician's Office Setting (INN)
+2033: Covered at Physician's Office Setting (OON)
+2912: Physician Office Cost Share Options (INN)
+2034: Physician Office Coinsurance (INN)
+2036: Physician Office Coinsurance (OON)
+2037: Plan Deductible Applies at Physician's Office (INN)
+2039: Plan Deductible Applies at Physician's Office (OON)
+2040: Covered at Home Setting (INN)
+2042: Covered at Home Setting (OON)
+2043: Home Setting Coinsurance (INN)
+2045: Home Setting Coinsurance (OON)
+2046: Plan Deductible Applies at Home Setting (INN)
+2048: Plan Deductible Applies at Home Setting (OON)
 
 2. Pharmacy Description: This section pertains to the pharmacy benefits of the plan. It includes details on the pharmacy network,
 - drug formulary,
@@ -268,240 +269,240 @@ Medical Pharmaceuticals:
 - and various clinical programs related to prescriptions.
 
 Plan: 
-- 2717: Pharmacy Plan Design,
-- 2250: Pharmacy Network,
-- 3641: Client Anchor,
-- 3592: Precision Network,
-- 2252: Formulary/Prescription Drug List,
-- 2251: Tier Selection,
-- 3597: Generic Tiering,
-- 3598: Specialty Tiering,
-- 2253: Dispensing Requirement,
-- 3211: Cost Share Processing Logic,
-- 2254: Out-of-network Pharmacy Benefits,
-- 2255: Pharmacy Deductible - Individual,
-- 2256: Pharmacy Deductible - Individual,
-- 2257: Pharmacy Deductible - Family,
-- 2258: Pharmacy Deductible - Family,
-- 2259: Pharmacy OOP Maximum - Individual,
-- 2260: Pharmacy OOP Maximum - Individual,
-- 2261: Pharmacy OOP Maximum - Family,
-- 2262: Pharmacy OOP Maximum - Family,
-- 2263: Pharmacy Deductible Accumulates to Pharmacy OOP,
-- 2264: Home Delivery Accumulates to Pharmacy OOP,
-- 2907: Pharmacy Discount Option,
-- 3215: Pharmacy Rebate Option,
-- 3670: EnReachRx for Cigna Healthcare,
-- 2368: Pharmacy Pricing,
-- 2908: Combined Med/RX Ded/OOP.
+2717: Pharmacy Plan Design (IN1)
+2250: Pharmacy Network (IN1)
+3641: Client Anchor (IN1)
+3592: Precision Network (INN)
+2252: Formulary/Prescription Drug List (IN1)
+2251: Tier Selection (IN1)
+3597: Generic Tiering (INN)
+3598: Specialty Tiering (INN)
+2253: Dispensing Requirement (IN1)
+3211: Cost Share Processing Logic (IN1)
+2254: Out-of-network Pharmacy Benefits (OON)
+2255: Pharmacy Deductible - Individual (IN1)
+2256: Pharmacy Deductible - Individual (OON)
+2257: Pharmacy Deductible - Family (IN1)
+2258: Pharmacy Deductible - Family (OON)
+2259: Pharmacy OOP Maximum - Individual (IN1)
+2260: Pharmacy OOP Maximum - Individual (OON)
+2261: Pharmacy OOP Maximum - Family (IN1)
+2262: Pharmacy OOP Maximum - Family (OON)
+2263: Pharmacy Deductible Accumulates to Pharmacy OOP (IN1)
+2264: Home Delivery Accumulates to Pharmacy OOP (IN1)
+2907: Pharmacy Discount Option (IN1)
+3215: Pharmacy Rebate Option (IN1)
+3670: EnReachRx for Cigna Healthcare (INN)
+2368: Pharmacy Pricing (IN1)
+2908: Combined Med/RX Ded/OOP (IN1)
 
 Supply Limit:
-- 2281: Non-Specialty Drugs - Day Supply Limit - Retail,
-- 2282: Non-Specialty Drugs - Day Supply Limit - Home Delivery,
-- 2283: Specialty Drugs - Day Supply Limit - Retail,
-- 2284: Specialty Drugs - Day Supply Limit - Home Delivery,
-- 3386: Clinical Day Supply Program,
-- 3387: Up to 15 Days Supply (Split Fill),
-- 3388: 30-90 Days Supply Maximums,
-- 3389: Customer Cost Proration.
+2281: Non-Specialty Drugs - Day Supply Limit - Retail (IN1)
+2282: Non-Specialty Drugs - Day Supply Limit - Home Delivery (IN1)
+2283: Specialty Drugs - Day Supply Limit - Retail (IN1)
+2284: Specialty Drugs - Day Supply Limit - Home Delivery (IN1)
+3386: Clinical Day Supply Program (INN)
+3387: Up to 15 Days Supply (Split Fill) (INN)
+3388: 30-90 Days Supply Maximums (INN)
+3389: Customer Cost Proration (INN)
 
-Retail Cost Share: 
-- 2285: Retail Cost Share Type,
-- 2286: Retail Cost Share Type,
-- 2287: Retail Min/Max Option for Coinsurance,
-- 2289: Oral Specialty Drugs Cost Share,
-- 2872: Retail Flat Customer Coinsurance,
-- 2290: Retail Flat Customer Coinsurance,
-- 2291: Retail Generic Copay,
-- 2293: Retail Generic Customer Coinsurance,
-- 2295: Retail Generic Minimum Copay,
-- 2297: Retail Generic Maximum Copay,
-- 2299: Deductible Applies to In Network Retail - Generic,
-- 3500: Retail Pref Generic Copay,
-- 3501: Retail Pref Generic Customer Coinsurance,
-- 3502: Retail Pref Generic Minimum Copay,
-- 3503: Retail Pref Generic Maximum Copay,
-- 3504: Deductible Applies to In Network Retail - Pref Generic,
-- 3505: Retail Non Pref Generic Copay,
-- 3506: Retail Non Pref Generic Customer Coinsurance,
-- 3507: Retail Non Pref Generic Minimum Copay,
-- 3508: Retail Non Pref Generic Maximum Copay,
-- 3509: Deductible Applies to In Network Retail - Non Pref Generic,
-- 2300: Retail Pref Brand Copay,
-- 2302: Retail Pref Brand Customer Coinsurance,
-- 2304: Retail Pref Brand Minimum Copay,
-- 2306: Retail Pref Brand Maximum Copay,
-- 2308: Deductible Applies to In Network Retail - Pref Brand,
-- 2309: Retail Non Pref Brand Copay,
-- 2311: Retail Non Pref Brand Customer Coinsurance,
-- 2313: Retail Non Pref Brand Minimum Copay,
-- 2315: Retail Non Pref Brand Maximum Copay,
-- 2317: Deductible Applies to In Network Retail - Non Pref Brand,
-- 2318: Retail Specialty Copay,
-- 2320: Retail Specialty Customer Coinsurance,
-- 2322: Retail Specialty Minimum Copay,
-- 2324: Retail Specialty Maximum Copay,
-- 2326: Deductible Applies to In Network Retail - Specialty,
-- 3510: Retail Pref Specialty Copay,
-- 3511: Retail Pref Specialty Customer Coinsurance,
-- 3512: Retail Pref Specialty Minimum Copay,
-- 3513: Retail Pref Specialty Maximum Copay,
-- 3514: Deductible Applies to In Network Retail - Pref Specialty,
-- 3515: Retail Non Pref Specialty Copay,
-- 3516: Retail Non Pref Specialty Customer Coinsurance,
-- 3517: Retail Non Pref Specialty Minimum Copay,
-- 3518: Retail Non Pref Specialty Maximum Copay,
-- 3519: Deductible Applies to In Network Retail - Non Pref Specialty,
-- 2763: 90 Day Retail Benefit Cost Share (copay multiplier),
-- 2764: Retail Generic Copay (90 Days),
-- 2765: Retail Generic Customer Coinsurance (90 Days),
-- 2766: Retail Generic Minimum Copay (90 Days),
-- 2767: Retail Generic Maximum Copay (90 Days),
-- 2768: Deductible Applies to In Network Retail - Generic (90 Days),
-- 3520: Retail Pref Generic Copay (90 Days),
-- 3521: Retail Pref Generic Customer Coinsurance (90 Days),
-- 3522: Retail Pref Generic Minimum Copay (90 Days),
-- 3523: Retail Pref Generic Maximum Copay (90 Days),
-- 3524: Deductible Applies to In Network Retail - Pref Generic (90 Days),
-- 3525: Retail Non Pref Generic Copay (90 Days),
-- 3526: Retail Non Pref Generic Customer Coinsurance (90 Days),
-- 3527: Retail Non Pref Generic Minimum Copay (90 Days),
-- 3528: Retail Non Pref Generic Maximum Copay (90 Days),
-- 3529: Deductible Applies to In Network Retail - Non Pref Generic (90 Days),
-- 2769: Retail Pref Brand Copay (90 Days),
-- 2770: Retail Pref Brand Customer Coinsurance (90 Days),
-- 2771: Retail Pref Brand Minimum Copay (90 Days),
-- 2772: Retail Pref Brand Maximum Copay (90 Days),
-- 2773: Deductible Applies to In Network Retail - Pref Brand (90 Days),
-- 2774: Retail Non Pref Brand Copay (90 Days),
-- 2775: Retail Non Pref Brand Customer Coinsurance (90 Days),
-- 2776: Retail Non Pref Brand Minimum Copay (90 Days),
-- 2777: Retail Non Pref Brand Maximum Copay (90 Days),
-- 2778: Deductible Applies to In Network Retail - Non Pref Brand (90 Days),
-- 2819: Retail Specialty Copay (90 Days),
-- 2815: Retail Specialty Customer Coinsurance (90 Days),
-- 2816: Retail Specialty Minimum Copay (90 Days),
-- 2817: Retail Specialty Maximum Copay (90 Days),
-- 2818: Deductible Applies to In Network Retail - Specialty (90 Days),
-- 3530: Retail Pref Specialty Copay (90 Days),
-- 3531: Retail Pref Specialty Customer Coinsurance (90 Days),
-- 3532: Retail Pref Specialty Minimum Copay (90 Days),
-- 3533: Retail Pref Specialty Maximum Copay (90 Days),
-- 3534: Deductible Applies to In Network Retail - Pref Specialty (90 Days),
-- 3535: Retail Non Pref Specialty Copay (90 Days),
-- 3536: Retail Non Pref Specialty Customer Coinsurance (90 Days),
-- 3537: Retail Non Pref Specialty Minimum Copay (90 Days),
-- 3538: Retail Non Pref Specialty Maximum Copay (90 Days),
-- 3539: Deductible Applies to In Network Retail - Non Pref Specialty (90 Days),
-- 2909: Retail Individual Deductible.
+Retail Cost Share:
+2285: Retail Cost Share Type (IN1)
+2286: Retail Cost Share Type (OON)
+2287: Retail Min/Max Option for Coinsurance (IN1)
+2289: Oral Specialty Drugs Cost Share (IN1)
+2872: Retail Flat Customer Coinsurance (IN1)
+2290: Retail Flat Customer Coinsurance (OON)
+2291: Retail Generic Copay (IN1)
+2293: Retail Generic Customer Coinsurance (IN1)
+2295: Retail Generic Minimum Copay (IN1)
+2297: Retail Generic Maximum Copay (IN1)
+2299: Deductible Applies to In Network Retail - Generic (IN1)
+3500: Retail Pref Generic Copay (INN)
+3501: Retail Pref Generic Customer Coinsurance (INN)
+3502: Retail Pref Generic Minimum Copay (INN)
+3503: Retail Pref Generic Maximum Copay (INN )
+3504: Deductible Applies to In Network Retail - Pref Generic (INN)
+3505: Retail Non Pref Generic Copay (INN)
+3506: Retail Non Pref Generic Customer Coinsurance (INN)
+3507: Retail Non Pref Generic Minimum Copay (INN)
+3508: Retail Non Pref Generic Maximum Copay (INN)
+3509: Deductible Applies to In Network Retail - Non Pref Generic (INN)
+2300: Retail Pref Brand Copay (IN1)
+2302: Retail Pref Brand Customer Coinsurance (IN1)
+2304: Retail Pref Brand Minimum Copay (IN1)
+2306: Retail Pref Brand Maximum Copay (IN1)
+2308: Deductible Applies to In Network Retail - Pref Brand (IN1)
+2309: Retail Non Pref Brand Copay (IN1)
+2311: Retail Non Pref Brand Customer Coinsurance (IN1)
+2313: Retail Non Pref Brand Minimum Copay (IN1)
+2315: Retail Non Pref Brand Maximum Copay (IN1)
+2317: Deductible Applies to In Network Retail - Non Pref Brand (IN1)
+2318: Retail Specialty Copay (IN1)
+2320: Retail Specialty Customer Coinsurance (IN1)
+2322: Retail Specialty Minimum Copay (IN1)
+2324: Retail Specialty Maximum Copay (IN1)
+2326: Deductible Applies to In Network Retail - Specialty (IN1)
+3510: Retail Pref Specialty Copay (INN)
+3511: Retail Pref Specialty Customer Coinsurance (INN)
+3512: Retail Pref Specialty Minimum Copay (INN)
+3513: Retail Pref Specialty Maximum Copay (INN)
+3514: Deductible Applies to In Network Retail - Pref Specialty (INN)
+3515: Retail Non Pref Specialty Copay (INN)
+3516: Retail Non Pref Specialty Customer Coinsurance (INN)
+3517: Retail Non Pref Specialty Minimum Copay (INN)
+3518: Retail Non Pref Specialty Maximum Copay (INN)
+3519: Deductible Applies to In Network Retail - Non Pref Specialty (INN)
+2763: 90 Day Retail Benefit Cost Share (copay multiplier) (IN1)
+2764: Retail Generic Copay (90 Days) (IN1)
+2765: Retail Generic Customer Coinsurance (90 Days) (IN1)
+2766: Retail Generic Minimum Copay (90 Days) (IN1)
+2767: Retail Generic Maximum Copay (90 Days) (IN1)
+2768: Deductible Applies to In Network Retail - Generic (90 Days) (IN1)
+3520: Retail Pref Generic Copay (90 Days) (INN)
+3521: Retail Pref Generic Customer Coinsurance (90 Days) (INN)
+3522: Retail Pref Generic Minimum Copay (90 Days) (INN)
+3523: Retail Pref Generic Maximum Copay (90 Days) (INN)
+3524: Deductible Applies to In Network Retail - Pref Generic (90 Days) (INN)
+3525: Retail Non Pref Generic Copay (90 Days) (INN)
+3526: Retail Non Pref Generic Customer Coinsurance (90 Days) (INN)
+3527: Retail Non Pref Generic Minimum Copay (90 Days) (INN)
+3528: Retail Non Pref Generic Maximum Copay (90 Days) (INN)
+3529: Deductible Applies to In Network Retail - Non Pref Generic (90 Days) (INN)
+2769: Retail Pref Brand Copay (90 Days) (IN1)
+2770: Retail Pref Brand Customer Coinsurance (90 Days) (IN1)
+2771: Retail Pref Brand Minimum Copay (90 Days) (IN1)
+2772: Retail Pref Brand Maximum Copay (90 Days) (IN1)
+2773: Deductible Applies to In Network Retail - Pref Brand (90 Days) (IN1)
+2774: Retail Non Pref Brand Copay (90 Days) (IN1)
+2775: Retail Non Pref Brand Customer Coinsurance (90 Days) (IN1)
+2776: Retail Non Pref Brand Minimum Copay (90 Days) (IN1)
+2777: Retail Non Pref Brand Maximum Copay (90 Days) (IN1)
+2778: Deductible Applies to In Network Retail - Non Pref Brand (90 Days) (IN1)
+2819: Retail Specialty Copay (90 Days) (IN1)
+2815: Retail Specialty Customer Coinsurance (90 Days) (IN1)
+2816: Retail Specialty Minimum Copay (90 Days) (IN1)
+2817: Retail Specialty Maximum Copay (90 Days) (IN1)
+2818: Deductible Applies to In Network Retail - Specialty (90 Days) (IN1)
+3530: Retail Pref Specialty Copay (90 Days) (INN)
+3531: Retail Pref Specialty Customer Coinsurance (90 Days) (INN)
+3532: Retail Pref Specialty Minimum Copay (90 Days) (INN)
+3533: Retail Pref Specialty Maximum Copay (90 Days) (INN)
+3534: Deductible Applies to In Network Retail - Pref Specialty (90 Days) (INN)
+3535: Retail Non Pref Specialty Copay (90 Days) (INN)
+3536: Retail Non Pref Specialty Customer Coinsurance (90 Days) (INN)
+3537: Retail Non Pref Specialty Minimum Copay (90 Days) (INN)
+3538: Retail Non Pref Specialty Maximum Copay (90 Days) (INN)
+3539: Deductible Applies to In Network Retail - Non Pref Specialty (90 Days) (INN)
+2909: Retail Individual Deductible (IN1)
 
-90 Day Program: 
-- 2779: 90 Day Program Type,
-- 2780: Number of 30 Day Fills Allowed.
+90 Day Program:
+2779: 90 Day Program Type (IN1)
+2780: Number of 30 Day Fills Allowed (IN1)
 
-Home Delivery Cost Share: 
-- 2327: Home Delivery Cost Share Type,
-- 2328: Home Delivery Cost Share Type,
-- 2873: Home Delivery Flat Customer Coinsurance,
-- 2329: Home Delivery Min/Max Option for Coinsurance,
-- 2781: Home delivery Benefit Cost Share (copay multiplier),
-- 2330: Home Delivery Generic Copay,
-- 2331: Home Delivery Generic Customer Coinsurance,
-- 2332: Home Delivery Generic Minimum Copay,
-- 2333: Home Delivery Generic Maximum Copay,
-- 2334: Deductible Applies to In Network Home Delivery - Generic,
-- 3540: Home Delivery Pref Generic Copay,
-- 3541: Home Delivery Pref Generic Customer Coinsurance,
-- 3542: Home Delivery Pref Generic Minimum Copay,
-- 3543: Home Delivery Pref Generic Maximum Copay,
-- 3544: Deductible Applies to In Network Home Delivery - Pref Generic,
-- 3545: Home Delivery Non Pref Generic Copay,
-- 3546: Home Delivery Non Pref Generic Customer Coinsurance,
-- 3547: Home Delivery Non Pref Generic Minimum Copay,
-- 3548: Home Delivery Non Pref Generic Maximum Copay,
-- 3549: Deductible Applies to In Network Home Delivery - Non Pref Generic,
-- 2335: Home Delivery Pref Brand Copay,
-- 2336: Home Delivery Pref Brand Customer Coinsurance,
-- 2337: Home Delivery Pref Brand Minimum Copay,
-- 2338: Home Delivery Pref Brand Maximum Copay,
-- 2339: Deductible Applies to In Network Home Delivery - Pref Brand,
-- 2340: Home Delivery Non Pref Brand Copay,
-- 2341: Home Delivery Non Pref Brand Customer Coinsurance,
-- 2342: Home Delivery Non Pref Brand Minimum Copay,
-- 2343: Home Delivery Non Pref Brand Maximum Copay,
-- 2344: Deductible Applies to In Network Home Delivery - Non Pref Brand,
-- 2345: Home Delivery Specialty Copay,
-- 2346: Home Delivery Specialty Customer Coinsurance,
-- 2347: Home Delivery Specialty Minimum Copay,
-- 2348: Home Delivery Specialty Maximum Copay,
-- 2349: Deductible Applies to In Network Home Delivery Specialty,
-- 3550: Home Delivery Pref Specialty Copay,
-- 3551: Home Delivery Pref Specialty Customer Coinsurance,
-- 3552: Home Delivery Pref Specialty Minimum Copay,
-- 3553: Home Delivery Pref Specialty Maximum Copay,
-- 3554: Deductible Applies to In Network Home Delivery - Pref Specialty,
-- 3555: Home Delivery Non Pref Specialty Copay,
-- 3556: Home Delivery Non Pref Specialty Customer Coinsurance,
-- 3557: Home Delivery Non Pref Specialty Minimum Copay,
-- 3558: Home Delivery Non Pref Specialty Maximum Copay,
-- 3559: Deductible Applies to In Network Home Delivery - Non Pref Specialty.
+Home Delivery Cost Share:
+2327: Home Delivery Cost Share Type (IN1)
+2328: Home Delivery Cost Share Type (OON)
+2873: Home Delivery Flat Customer Coinsurance (IN1)
+2329: Home Delivery Min/Max Option for Coinsurance (IN1)
+2781: Home delivery Benefit Cost Share (copay multiplier) (IN1)
+2330: Home Delivery Generic Copay (IN1)
+2331: Home Delivery Generic Customer Coinsurance (IN1)
+2332: Home Delivery Generic Minimum Copay (IN1)
+2333: Home Delivery Generic Maximum Copay (IN1)
+2334: Deductible Applies to In Network Home Delivery - Generic (IN1)
+3540: Home Delivery Pref Generic Copay (INN)
+3541: Home Delivery Pref Generic Customer Coinsurance (INN)
+3542: Home Delivery Pref Generic Minimum Copay (INN)
+3543: Home Delivery Pref Generic Maximum Copay (INN)
+3544: Deductible Applies to In Network Home Delivery - Pref Generic (INN)
+3545: Home Delivery Non Pref Generic Copay (INN)
+3546: Home Delivery Non Pref Generic Customer Coinsurance (INN)
+3547: Home Delivery Non Pref Generic Minimum Copay (INN)
+3548: Home Delivery Non Pref Generic Maximum Copay (INN)
+3549: Deductible Applies to In Network Home Delivery - Non Pref Generic (INN)
+2335: Home Delivery Pref Brand Copay (IN1)
+2336: Home Delivery Pref Brand Customer Coinsurance (IN1)
+2337: Home Delivery Pref Brand Minimum Copay (IN1)
+2338: Home Delivery Pref Brand Maximum Copay (IN1)
+2339: Deductible Applies to In Network Home Delivery - Pref Brand (IN1)
+2340: Home Delivery Non Pref Brand Copay (IN
+2341: Home Delivery Non Pref Brand Customer Coinsurance (IN1)
+2342: Home Delivery Non Pref Brand Minimum Copay (IN1)
+2343: Home Delivery Non Pref Brand Maximum Copay (IN1)
+2344: Deductible Applies to In Network Home Delivery - Non Pref Brand (IN1)
+2345: Home Delivery Specialty Copay (IN1)
+2346: Home Delivery Specialty Customer Coinsurance (IN1)
+2347: Home Delivery Specialty Minimum Copay (IN1)
+2348: Home Delivery Specialty Maximum Copay (IN1)
+2349: Deductible Applies to In Network Home Delivery Specialty (IN1)
+3550: Home Delivery Pref Specialty Copay (INN)
+3551: Home Delivery Pref Specialty Customer Coinsurance (INN)
+3552: Home Delivery Pref Specialty Minimum Copay (INN)
+3553: Home Delivery Pref Specialty Maximum Copay (INN)
+3554: Deductible Applies to In Network Home Delivery - Pref Specialty (INN)
+3555: Home Delivery Non Pref Specialty Copay (INN)
+3556: Home Delivery Non Pref Specialty Customer Coinsurance (INN)
+3557: Home Delivery Non Pref Specialty Minimum Copay (INN)
+3558: Home Delivery Non Pref Specialty Maximum Copay (INN)
+3559: Deductible Applies to In Network Home Delivery - Non Pref Specialty (INN)
 
-Home Delivery Programs: 
-- 3225: Out-of-Pocket Adjuster Program,
-- 3270: SaveOnSP Programs,
-- 2350: Exclusive Specialty Home Delivery Program (Med Access Option),
-- 2351: Number of Exclusive Specialty Retail Fills Allowed,
-- 2352: Maintenance Home Delivery Program,
-- 2353: Number of Maintenance Retail Fills Allowed,
-- 2354: Maintenance Drug List.
+Home Delivery Programs:
+3225: Out-of-Pocket Adjuster Program (IN1)
+3270: SaveOnSP Programs (IN1)
+2350: Exclusive Specialty Home Delivery Program (Med Access Option) (IN1)
+2351: Number of Exclusive Specialty Retail Fills Allowed (IN1)
+2352: Maintenance Home Delivery Program (IN1)
+2353: Number of Maintenance Retail Fills Allowed (IN1)
+2354: Maintenance Drug List (IN1)
 
 Reproductive Drug List Options:
-- 2267: PPACA Contraceptive Devices and Drugs,
-- 2268: Contraceptive Devices and Drugs Buy-Up,
-- 2269: Oral Fertility Drugs,
-- 3263: Fertility - Injectable,
-- 3264: Fertility - Intra-Vaginal.
+2267: PPACA Contraceptive Devices and Drugs (IN1)
+2268: Contraceptive Devices and Drugs Buy-Up (IN1)
+2269: Oral Fertility Drugs (IN1)
+3263: Fertility - Injectable (IN1)
+3264: Fertility - Intra-Vaginal (IN1)
 
-Preventive Drugs Cost Share Enrichment: 
-- 2355: Preventive Drugs Management,
-- 3265: Generics,
-- 3266: Generic Customer Cost Share,
-- 3267: Brand Drugs,
-- 3268: Brand Drugs Customer Cost Share,
-- 3269: Applies When Dispensed At.
+Preventive Drugs Cost Share Enrichment:
+2355: Preventive Drugs Management (IN1)
+3265: Generics (IN1)
+3266: Generic Customer Cost Share (IN1)
+3267: Brand Drugs (IN1)
+3268: Brand Drugs Customer Cost Share (IN1)
+3269: Applies When Dispensed At (IN1)
+EncircleRx for Cigna Programs:
 
-EncircleRx for Cigna Programs: 
-- 3649: EncircleRx for Cigna: Weight Management.
+3649: EncircleRx for Cigna: Weight Management (IN1)
 
-Drug List Options: 
-- 2271: PPACA Prenatal Vitamins,
-- 2272: Prescription Vitamins Buy-Up,
-- 2273: Prescription Weight Loss Drugs,
-- 2274: PPACA Smoking Cessation,
-- 2275: Smoking Cessation Buy-Up,
-- 2270: Lifestyle Drugs,
-- 2276: Insulin,
-- 2277: Diabetic Supplies,
-- 2278: Diabetic Pens & cartridges,
-- 2266: Optional Self Injectable (Excludes Infertility),
-- 2761: Proton Pump Inhibitors (Ulcer drugs),
-- 2762: Non-Sedating Anti-histamines,
-- 2265: Drug Removal Table.
+Drug List Options:
+2271: PPACA Prenatal Vitamins (IN1)
+2272: Prescription Vitamins Buy-Up (IN1)
+2273: Prescription Weight Loss Drugs (IN1)
+2274: PPACA Smoking Cessation (IN1)
+2275: Smoking Cessation Buy-Up (IN1)
+2270: Lifestyle Drugs (IN1)
+2276: Insulin (IN1)
+2277: Diabetic Supplies (IN1)
+2278: Diabetic Pens & cartridges (IN1)
+2266: Optional Self Injectable (Excludes Infertility) (INN)
+2761: Proton Pump Inhibitors (Ulcer drugs) (IN1)
+2762: Non-Sedating Anti-histamines (IN1)
+2265: Drug Removal Table (IN1)
 
-Clinical Program: 
-- 2820: Non-SRx Drug Management Program,
-- 2782: Specialty Drug Management,
-- 2363: Specialty Condition Counseling (previously TheraCare),
-- 2906: Pay & Communicate (Step Therapy),
-- 2893: Grandfathering (Step Therapy),
-- 2892: Grandfathering (Prior Auth - SRx and Non-SRx),
-- 2364: Complex Psych,
-- 2365: Narcotic Therapy Management Program.
+Clinical Program:
+2820: Non-SRx Drug Management Program (IN1)
+2782: Specialty Drug Management (IN1)
+2363: Specialty Condition Counseling (previously TheraCare) (IN1)
+2906: Pay & Communicate (Step Therapy) (IN1)
+2893: Grandfathering (Step Therapy) (IN1)
+2892: Grandfathering (Prior Auth - SRx and Non-SRx) (IN1)
+2364: Complex Psych (IN1)
+2365: Narcotic Therapy Management Program (IN1)
 
-Patient Assurance Program: 
-- 3232: Patient Assurance Program,
-- 3233: Cost Share Accumulates To,
-- 3234: Pharma Mfg Discount Accumulates To.
+Patient Assurance Program:
+3232: Patient Assurance Program (IN1)
+3233: Cost Share Accumulates To (IN1)
+3234: Pharma Mfg Discount Accumulates To (IN1)
 """
 
 
@@ -509,6 +510,7 @@ SOURCE_DATAFRAME = [
     [1630, 'Medical', 'Plan', 'Variable Coinsurance Applies', 'INN-OON'],
     [1631, 'Medical', 'Plan', 'Coinsurance', 'INN'],
     [1633, 'Medical', 'Plan', 'Coinsurance', 'OON'],
+    [1635, 'Medical', 'Plan', 'Combined Medical/RX Deductible/OOP', 'INN-OON'],
     [1638, 'Medical', 'Plan Deductible', 'Plan Deductible - Order of Applicability', 'INN-OON'],
     [2689, 'Medical', 'Plan Deductible', 'Collective Deductible', 'INN-OON'],
     [1639, 'Medical', 'Plan Deductible', 'Individual Plan - Indiv Ded Max Amount', 'INN'],
