@@ -9,7 +9,7 @@ from const import SOURCE_DATAFRAME
 def _safe_stem(name: str) -> str:
     # Keep filenames stable and OS-friendly
     stem = os.path.splitext(os.path.basename(name))[0]
-    safe = "".join(ch if ch.isalnum() or ch in ("-", "_") else "_" for ch in stem).strip("_")
+    safe = "".join(ch if ch.isalnum() or ch in ("-", "_") else "_" for ch in stem).strip("_-")
     return safe or "upload"
 
 

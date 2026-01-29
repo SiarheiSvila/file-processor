@@ -23,6 +23,11 @@ def read_file(uploaded_file: UploadedFile) -> bytes:
     """Read content from a Streamlit UploadedFile object."""
     return uploaded_file.getvalue()
 
+def run_extraction(file_content: bytes, prompt_text: str, temperature: float):
+    """Call LLM and extract JSON from response."""
+    llm_response = bedrock_client.call_llm(file_content, prompt_text, temperature)
+    return extract_json(llm_response)
+
 def process_file(
     uploaded_file: UploadedFile,
     prompt_text: str,
@@ -34,8 +39,7 @@ def process_file(
     read_file_banner = st.success("File read complete!")
 
     process_file_banner = st.info("Extracting attributes...")
-    llm_response = bedrock_client.call_llm(file_content, prompt_text, temperature)
-    json_response = extract_json(llm_response)
+    json_response = run_extraction(file_content, prompt_text, temperature)
     process_file_banner.empty()
     process_file_banner = st.success("Extracted attributes!")
     display(json_response)
