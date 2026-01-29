@@ -7,8 +7,6 @@ import json
 from display import display
 from result_logger import save_result_files
 
-bedrock_client = BedrockClient()
-
 def extract_json(response: str) -> json:
     # Use regex to find a JSON array that starts with [ { and ends with } ]
     match = re.search(r'\[\s*\{[\s\S]*?\}\s*\]', response)
@@ -26,8 +24,10 @@ def read_file(uploaded_file: UploadedFile) -> bytes:
 def process_file(
     uploaded_file: UploadedFile,
     prompt_text: str,
-    temperature: float
+    temperature: float,
+    model_id: str = "us.anthropic.claude-sonnet-4-20250514-v1:0",
 ):
+    bedrock_client = BedrockClient(model=model_id)
     read_file_banner = st.info(f"Reading file: {uploaded_file.name}")
     file_content = read_file(uploaded_file)
     read_file_banner.empty()

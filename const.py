@@ -8,27 +8,38 @@ Accuracy is critical. For each field ID,
 - When multiple tiers share the same alias in the reference table (e.g., in-network vs. out-of-network rows), output them for each tier-specific value.
 - Ignore unrelated tables, footnotes, or marketing text unless they explicitly contain the attribute and value.
 
-Pay attention to network tiers. Many fields are specific to a network tier (e.g.,
+Pay attention to network tiers. Many fields are specific to a network tier:
 - INN,
 - OON,
-- IN1). Ensure you extract the value for the correct tier as specified in the attribute name. 
+- IN1
+Ensure you extract the value for the correct tier as specified in the attribute name.
+INN-OON means attribute is not net-work specific.
+Tier 1 identifier (except Pharmaceutical) is used for preferred in-network provider either with Tiered network or company-owner of SBC
 
 Output format
-Don't include any format instructions, hust a simple json
-The entire output must be a single key-value pair. It should be a JSON that contains array of attributes. Every attribute contains: id and value.
+Don't include any format instructions, just a simple json
+The entire output must be a single key-value pair. It should be a JSON that contains array of attributes. Every attribute contains: id, value., confidence
 - id is a referenced original id
-- value is extracted value exactly as written in the PDF text, but remove currency symbols, percent signs, and unit abbreviations (strip $, %, per day, per visit, days, etc.). Keep the word “None” as-is. Retain other words that are part of the stated benefit. 
+- value is extracted value exactly as written in the PDF text, but remove currency symbols, percent signs, and unit abbreviations (strip $, %, per day, per visit, days, etc.). Keep the word “None” as-is. Retain other words that are part of the stated benefit. If logical output is Yes, then set "-1290" value; if logical output is No, then set "-1303" value
+- confidence: An integer from 0 to 100 indicating how certain you are that the field was extracted correctly. 0 means no confidence, 100 means maximum confidence. Use your best judgment based on the clarity and directness of the match in the PDF text. Examples:
+    100: Value is explicitly stated and clearly linked to the id.
+    80-99: Value matches but with minor ambiguity (e.g., slight wording or formatting differences).
+    50-79: Value inferred with moderate uncertainty (e.g., not directly linked or multiple possible matches).
+    1-49: Value weakly inferred or guessed, with significant ambiguity.
+    0: No value could be confidently extracted.
+
 
 Output example format:
 [
-  {
-    "id": 1,
-    "value": "value 1"
-  },
-  {
-    "id": 2,
-    "value": "value 2"
-  }
+  { 
+    "id": 1, 
+    "value": "value 1", 
+    "confidence": 40 
+  }, { 
+    "id": 2, 
+    "value": "value 2", 
+    "confidence": 80 
+  } 
 ]
 
 Data Schema 
@@ -44,94 +55,118 @@ This section pertains to the medical benefits of the plan. It covers aspects lik
 - and emergency services.
 
 Plan: 
-1630: Variable Coinsurance Applies (INN-OON)
-1631: Coinsurance (INN)
-1633: Coinsurance (OON)
-1635: Combined Medical/RX Deductible/OOP (INN-OON)
+- 1630: Variable Coinsurance Applies, INN-OON
+Logical. Set as Yes if pdf contains various values of coinsurance; values for Primary care visit, Specialist visit, Diagnostic test, If you need drugs, Outpatient surgery, Emergency room, Urgent care, Hospital stay of the pdf should be checked for INN and OON separately; otherwise set No
+- 1631: Coinsurance, INN
+Standard rate used across the plan once the deductible is met; extract from If you have a hospital stay, Facility fee, In-network provider
+- 1633: Coinsurance, OON
+Standard rate used across the plan once the deductible is met; extract from If you have a hospital stay, Facility fee, Out-of-network provider
+- 1635: Combined Medical/RX Deductible/OOP, INN-OON
+Logical. Medical expenses and pharmacy (prescription drug) expenses are tracked together in the same "bucket."; Are there other deductibles for specific services? - if Answer is No, then Deductibles combined; if What is the out-of-pocket limit for this plan?", Answer doesn't show separate rows for "Prescription Drug Limit.", then OOP combined, set "-1740"; if both combined, then set "-1739"; if both not combined then set No 
 
 Plan Deductible: 
-1638: Plan Deductible - Order of Applicability (INN-OON)
-2689: Collective Deductible (INN-OON)
-1639: Individual Plan - Indiv Ded Max Amount (INN)
-1641: Individual Plan - Indiv Ded Max Amount (OON)
-2848: Family Plan - Indiv Ded Max Amount (INN)
-2849: Family Plan - Indiv Ded Max Amount (OON)
-1642: Family Plan - Family Ded Max Amount (INN)
-1644: Family Plan - Family Ded Max Amount (OON)
-3609: Individual Plan - Indiv Ded Max Amount (Tier 1) (INN)
-3610: Family Plan - Indiv Ded Max Amount (Tier 1) (INN)
-3611: Family Plan - Family Ded Max Amount (Tier 1) (INN)
-1645: Pharmacy Individual Deductible Cap Amount (INN)
-1646: Pharmacy Individual Deductible Cap Amount (OON)
-1647: Pharmacy Family Deductible Cap Amount (INN)
-1648: Pharmacy Family Dedu ctible Cap Amount (OON)
-1649: 3 Month Carryover (INN-OON)
-2708: Up Front Individual - Max Amount (IN1)
-2709: Up Front Individual - Max Amount (OON)
-2710: Up Front Family - Max Amount (IN1)
-2711: Up Front Family - Max Amount (OON)
+- 1638: Plan Deductible - Order of Applicability, INN-OON
+Logical. Sequence in which the deductible, copay, and coinsurance are applied; analyze two specific areas: "Are there services covered before you meet your deductible?" and  "Common Medical Events" Table. Result should be as one of sequences: "-1830" OR "-1831"
+- 2689: Collective Deductible, INN-OON
+Logical. In "What is the overall deductible?" should be condition "The entire family deductible must be met before the plan begins to pay.", then Yes; if absent, then No
+- 1639: Individual Plan - Indiv Ded Max Amount, INN
+- 1641: Individual Plan - Indiv Ded Max Amount, OON
+- 2848: Family Plan - Indiv Ded Max Amount, INN
+In "The entire family deductible must be met before the plan begins to pay." should be condition "each family member must meet their own individual deductible until the total amount of deductible expenses paid by all family members meets the overall family deductible", then it is equal to ID 1639
+- 2849: Family Plan - Indiv Ded Max Amount, OON
+In "The entire family deductible must be met before the plan begins to pay." should be condition "each family member must meet their own individual deductible until the total amount of deductible expenses paid by all family members meets the overall family deductible", then it is equal to ID 1641
+- 1642: Family Plan - Family Ded Max Amount, INN
+- 1644: Family Plan - Family Ded Max Amount, OON
+- 3609: Individual Plan - Indiv Ded Max Amount (Tier 1), INN
+- 3610: Family Plan - Indiv Ded Max Amount (Tier 1), INN
+- 3611: Family Plan - Family Ded Max Amount (Tier 1), INN
 
 Plan Out of Pocket: 
-2690: Collective OOP (INN-OON)
-2694: Individual Plan - Indiv OOP Max Amount (INN)
-2696: Individual Plan - Indiv OOP Max Amount (OON)
-2691: Family Plan - Indiv OOP Max Amount (INN)
-2692: Family Plan - Indiv OOP Max Amount (OON)
-2697: Family Plan - Family OOP Max Amount (INN)
-2699: Family Plan - Family OOP Max Amount (OON)
-3612: Individual Plan - Indiv OOP Max Amount (Tier 1) (INN)
-3613: Family Plan - Indiv OOP Max Amount (Tier 1) (INN)
-3614: Family Plan - Family OOP Max Amount (Tier 1) (INN)
-2244: OOP Max Copays Accumulation (INN)
-2246: OOP Max Copays Accumulation (OON)
-2247: OOP Max Plan Deductible Accumulation (INN)
-2249: OOP Max Plan Deductible Accumulation (OON)
+- 2690: Collective OOP, INN-OON
+Logical. If "What is the out-of-pocket limit?", the "Why This Matters" column will say: "The entire family out-of-pocket limit must be met before the plan pays 100%.", then Yes, otherwise No
+- 2694: Individual Plan - Indiv OOP Max Amount, INN
+- 2696: Individual Plan - Indiv OOP Max Amount, OON
+- 2691: Family Plan - Indiv OOP Max Amount, INN
+In "What is the out-of-pocket limit for this plan?" should be condition "Each individual must meet their own out-of-pocket limit until the overall family out-of-pocket limit has been met.", then it is equal to ID 2694
+- 2692: Family Plan - Indiv OOP Max Amount, OON
+In "What is the out-of-pocket limit for this plan?" should be condition "Each individual must meet their own out-of-pocket limit until the overall family out-of-pocket limit has been met.", then it is equal to ID 2696
+- 2697: Family Plan - Family OOP Max Amount, INN
+- 2699: Family Plan - Family OOP Max Amount, OON
+- 3612: Individual Plan - Indiv OOP Max Amount (Tier 1), INN
+- 3613: Family Plan - Indiv OOP Max Amount (Tier 1), INN
+- 3614: Family Plan - Family OOP Max Amount (Tier 1), INN
+- 2244: OOP Max Copays Accumulation, INN
+Logical. In "What is the out-of-pocket limit for this plan?" can be "The out-of-pocket limit is the most you could pay in a year... This fee includes copayments, deductibles, and coinsurance.", then display All copays accumulate; If in "What is not included in the out-of-pocket limit?" copays are listed, then All copays do not accumulate; if for first condition text is absent and for second exclusion is absent, then All copays accumulate
+- 2246: OOP Max Copays Accumulation, OON
+Same logic as for ID 2244
+- 2247: OOP Max Plan Deductible Accumulation, INN
+Logical. In "What is the out-of-pocket limit for this plan?" can be "The out-of-pocket limit is the most you could pay in a year... This fee includes copayments, deductibles, and coinsurance.", then display Ded accumulates; If in "What is not included in the out-of-pocket limit?" coinsurance is listed, then Ded does not accumulate; if for first condition text is absent and for second exclusion is absent, then Ded accumulates
+- 2249: OOP Max Plan Deductible Accumulation, OON
+Same logic as for ID 2247
 
 Physician Services - Office Visit:
-2432: Tiered Services Include (INN)
-2688: Cost Share Option (INN)
-2427: Non-Reviewed Specialist (INN)
-2428: Tier 1 Coinsurance (INN)
-2430: Non-Tier 1 Coinsurance (INN)
-1657: Combined PCP and Specialist (INN)
-1659: Combined PCP and Specialist (OON)
-2433: Primary Care Physician Service Tier 1 Copay (INN)
-2434: Primary Care Physician Service Tier 1 Coinsurance (INN)
-2436: Plan Deductible Applies to Primary Care Physician Service Tier 1 (INN)
-1673: Primary Care Physician Service Copay (INN)
-1675: Primary Care Physician Service Coinsurance (INN)
-1677: Primary Care Physician Service Coinsurance (OON)
-1678: Plan Deductible Applies to Primary Care Physician (INN)
-1680: Plan Deductible Applies to Primary Care Physician (OON)
-2438: Specialty Care Service Tier 1 Copay (INN)
-2439: Specialty Care Service Tier 1 Coinsurance (INN)
-2441: Plan Deductible Applies to Specialty Care Service Tier 1 (INN)
-1700: Specialty Care Service Copay (INN)
-1702: Specialty Care Service Coinsurance (INN)
-1704: Specialty Care Service Coinsurance (OON)
-1705: Plan Deductible Applies to Specialty Care (INN)
-1707: Plan Deductible Applies to Specialty Care (OON)
-1720: Office Surgery Cost Share Option (INN)
-1722: Office Surgery Cost Share Option (OON)
-1723: Plan Deductible Applies to Office Surgery (INN)
-2679: Plan Deductible Applies to Office Surgery (OON)
-3634: Office Surgery PCP Copay Tier 1 (INN)
-3635: Office Surgery PCP Coinsurance Tier 1 (INN)
-3636: Office Surgery Plan Ded Applies to PCP Tier 1 (INN)
-3624: Office Surgery PCP Copay (INN)
-3625: Office Surgery PCP Coinsurance (INN)
-3626: Office Surgery PCP Coinsurance (OON)
-3627: Office Surgery Plan Ded Applies to PCP (INN)
-3628: Office Surgery Plan Ded Applies to PCP (OON)
-3637: Office Surgery SPC Copay Tier 1 (INN)
-3638: Office Surgery SPC Coinsurance Tier 1 (INN)
-3639: Office Surgery Plan Ded Applies to SPC Tier 1 (INN)
-3629: Office Surgery SPC Copay (INN)
-3630: Office Surgery SPC Coinsurance (INN)
-3631: Office Surgery SPC Coinsurance (OON)
-3632: Office Surgery Plan Ded Applies to SPC (INN)
-3633: Office Surgery Plan Ded Applies to SPC (OON)
-2673: Alternative Care Annual Maximum (OR/WA Situs States Only) Cost Share Options (INN-OON)
+- 2432: Tiered Services Include, INN
+Logical. Yes if contains separate value for preferred in-network provider either with Tiered network or company-owner of SBC; otherwise No
+- 2688: Cost Share Option, INN
+In Common Medical Event, If you visit a health care provider’s office or clinic, Primary care visit for INN - if it is copay, then display Copay, if it is coinsurance, then display OV coins
+- 2427: Non-Reviewed Specialist, INN
+"Non-reviewed specialist" is used to distinguish specialists who do not require a referral or preauthorization (clinical review) from the plan or a Primary Care Physician before a visit. Check in Important questions, Do you need a referral to see a specialist? and display No or Yes
+- 2428: Tier 1 Coinsurance, INN
+- 2430: Non-Tier 1 Coinsurance, INN
+- 1657: Combined PCP and Specialist, INN
+In Common Medical Event, If you visit a health care provider’s office or clinic, check values for Primary care visit, Specialist visit. Set No if different amounts and Yes if the same
+- 1659: Combined PCP and Specialist, OON
+Same logic as for ID 1657
+- 2433: Primary Care Physician Service Tier 1 Copay, INN
+- 2434: Primary Care Physician Service Tier 1 Coinsurance, INN
+- 2436: Plan Deductible Applies to Primary Care Physician Service Tier 1, INN
+Logical either Yes or No: Check Important questions, Are there services covered before you meet your deductible? if copay or coinsurance is listed, then No; check Common Medical Event, If you visit a health care provider’s office or clinic, Primary care visit if there is condition about deductibles
+- 1673: Primary Care Physician Service Copay, INN
+- 1675: Primary Care Physician Service Coinsurance, INN
+- 1677: Primary Care Physician Service Coinsurance, OON
+- 1678: Plan Deductible Applies to Primary Care Physician, INN
+Same logic as for ID 2436
+- 1680: Plan Deductible Applies to Primary Care Physician, OON
+Logical either Yes or No: Check Important questions, Are there services covered before you meet your deductible? if coinsurance is listed, then No; check Common Medical Event, If you visit a health care provider’s office or clinic, Primary care visit if there is specific condition about deductibles
+- 2438: Specialty Care Service Tier 1 Copay, INN
+- 2439: Specialty Care Service Tier 1 Coinsurance, INN
+- 2441: Plan Deductible Applies to Specialty Care Service Tier 1, INN
+
+- 1700: Specialty Care Service Copay, INN
+- 1702: Specialty Care Service Coinsurance, INN
+- 1704: Specialty Care Service Coinsurance, OON
+- 1705: Plan Deductible Applies to Specialty Care, INN
+- 1707: Plan Deductible Applies to Specialty Care, OON
+- 1720: Office Surgery Cost Share Option, INN
+- 1722: Office Surgery Cost Share Option, OON
+- 1723: Plan Deductible Applies to Office Surgery, INN
+- 2679: Plan Deductible Applies to Office Surgery, OON
+- 3634: Office Surgery PCP Copay Tier 1, INN
+- 3635: Office Surgery PCP Coinsurance Tier 1, INN
+- 3636: Office Surgery Plan Ded Applies to PCP Tier 1, INN
+- 3624: Office Surgery PCP Copay, INN
+In If you have Outpatient surgery check Physician/Surgeon fees. PCP relates to Physician
+- 3625: Office Surgery PCP Coinsurance, INN
+Same logic as for ID 3624
+- 3626: Office Surgery PCP Coinsurance, OON
+Same logic as for ID 3624
+- 3627: Office Surgery Plan Ded Applies to PCP, INN
+Logical either Yes or No: Check Important questions, Are there services covered before you meet your deductible? if copay is listed, then No; check Common Medical Event, Outpatient surgery, Physician/Surgeon fee if there is specific condition about deductibles
+- 3628: Office Surgery Plan Ded Applies to PCP, OON
+Logical either Yes or No: check Common Medical Event, Outpatient surgery, Physician/Surgeon fee if there is specific condition about deductibles
+- 3637: Office Surgery SPC Copay Tier 1, INN
+- 3638: Office Surgery SPC Coinsurance Tier 1, INN
+- 3639: Office Surgery Plan Ded Applies to SPC Tier 1, INN
+- 3629: Office Surgery SPC Copay, INN
+In If you have Outpatient surgery check Physician/Surgeon fees. SPC relates to Surgeon or any other spelialist listed in Limitations
+- 3630: Office Surgery SPC Coinsurance, INN
+Same logic as for 3629
+- 3631: Office Surgery SPC Coinsurance, OON
+Same logic as for 3629
+- 3632: Office Surgery Plan Ded Applies to SPC, INN
+Logical either Yes or No: Check Important questions, Are there services covered before you meet your deductible? if copay is listed, then No; check Common Medical Event, Outpatient surgery, Physician/Surgeon fee if there is specific condition about deductibles
+- 3633: Office Surgery Plan Ded Applies to SPC, OON
+Logical either Yes or No: check Common Medical Event, Outpatient surgery, Physician/Surgeon fee if there is specific condition about deductibles
 
 Physician Services - Virtual Care: 
 3422: Benefit Steerage Approved (2021 Filing) (INN)
