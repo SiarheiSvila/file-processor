@@ -3,6 +3,22 @@ import pandas as pd
 from const import SOURCE_DATAFRAME
 import json
 
+def confidence_color(val):
+    try:
+        v = float(val)
+    except (TypeError, ValueError):
+        return ''
+    if v >= 80:
+        # Light green
+        return 'background-color: #d4f8e8'
+    elif 70 <= v < 80:
+        # Light yellow
+        return 'background-color: #fff9c4'
+    else:
+        # Light red
+        return 'background-color: #ffcccc'
+
+
 def display(attributes: json):
     # Extract the data from json object to streamlit table.
     # json format is: [{id: 1, value:value1}, {id:2, value:value2}]
@@ -22,4 +38,6 @@ def display(attributes: json):
     df_source = pd.DataFrame(SOURCE_DATAFRAME, columns=['id1', 'attr_type', 'category_name', 'name', 'tier_desc'])
     result_df = pd.merge(df, df_source, left_on='id', right_on='id1', how='left').drop('id1', axis=1)
     result_df = result_df[['id', 'attr_type', 'category_name', 'name', 'tier_desc', 'value', 'confidence']]
-    st.table(result_df)
+
+    result_df = result_df.style.map(confidence_color, subset=['confidence'])
+    st.dataframe(result_df, height="content")
